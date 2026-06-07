@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "FB Group Extractor V1.5",
+  "version": "1.5.0",
+  "description": "Extract Facebook group search results, parse group info, and improve group name detection.",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://www.facebook.com/*",
+    "https://facebook.com/*"
+  ],
+  "action": {
+    "default_title": "FB Group Extractor",
+    "default_popup": "popup.html"
+  }
+}

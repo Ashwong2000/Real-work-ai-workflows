@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>FB Group Extractor</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div class="app">
+      <h1>FB Group Extractor V1.5</h1>
+      <p class="desc">Extract Facebook group search results and parse basic group info.</p>
+
+      <button id="extractVisibleBtn">Extract Visible Groups</button>
+      <button id="extractLoadedBtn">Extract Loaded Groups</button>
+      <button id="downloadBtn" disabled>Download CSV</button>
+
+      <div id="status" class="status">Open a Facebook group search page, scroll, then click Extract Loaded Groups.</div>
+
+      <div class="preview-wrap">
+        <table id="previewTable">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Group Name</th>
+              <th>Privacy</th>
+              <th>Members</th>
+              <th>Posts / Day</th>
+              <th>Unread Posts</th>
+              <th>Friends Joined</th>
+              <th>URL</th>
+              <th>Group Basic Info</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+
+      <p class="hint">
+        Tip: Facebook uses lazy loading. Scroll manually first, then use Extract Loaded Groups.
+      </p>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
