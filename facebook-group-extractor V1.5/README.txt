@@ -28,7 +28,7 @@ joined_time: Joined: Dec 2025
 示例：
 LASER FILES 公开 · 6.5 万位成员 · 25 篇未读帖子 · 加入时间：2025年12月 17 位好友已加入 访问
 
-会识别为：
+识别为：
 group_name: LASER FILES
 privacy_status: Public
 member_count_number: 65000
