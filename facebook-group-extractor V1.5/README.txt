@@ -1,37 +1,102 @@
-FB Group Extractor V1.5
+# FB Group Extractor V1.5
 
-Fixes:
-1. Fixed an issue where the group name was incorrectly identified as "Visit" (or "Access").
-2. Group names are now prioritized for extraction from the first segment of `group_basic_info`—specifically, the content preceding the privacy status (Public/Private) and member count.
-3. Added `unread_posts` / `unread_posts_number` fields.
-4. Added `joined_time` field.
-5. Retained the group name and avatar cleaning rules from V1.4.
+A simple Chrome extension for collecting information from Facebook group pages and exporting the results as a CSV file.
 
-Example:
-LASER FILES Public · 65K members · 25 unread posts · Joined: Dec 2025 17 friends have joined Visit
+This tool is built for community research and daily operation work.  
+It helps reduce repetitive manual copy-and-paste work when checking Facebook groups, posts, and community activity.
 
-Parsed as:
-group_name: LASER FILES
-privacy_status: Public
-member_count_number: 65000
-unread_posts_number: 25
-friends_joined_number: 17
-joined_time: Joined: Dec 2025
+---
 
-修复内容：
-1. 修复小组名被识别成“访问”的问题。
-2. 小组名优先从 group_basic_info 的第一段提取，也就是公开/非公开/成员数之前的内容。
-3. 新增 unread_posts / unread_posts_number 字段。
-4. 新增 joined_time 字段。
-5. 继续保留 V1.4 的小组名头像清洗规则。
+## What It Does
 
-示例：
-LASER FILES 公开 · 6.5 万位成员 · 25 篇未读帖子 · 加入时间：2025年12月 17 位好友已加入 访问
+This extension reads information from the Facebook group page you have already opened.
 
-识别为：
-group_name: LASER FILES
-privacy_status: Public
-member_count_number: 65000
-unread_posts_number: 25
-friends_joined_number: 17
-joined_time: 加入时间：2025年12月
+It can extract information that is currently visible or already loaded on the page.
+
+Important:
+
+- It does not log in to Facebook automatically
+- It only reads content that you can already see on your current page
+- If you want to extract more loaded content, you need to scroll down manually first
+
+---
+
+## How to Use
+
+1. Download the zip file
+2. Unzip the file
+3. Open Google Chrome
+4. Go to:
+
+```text
+5.chrome://extensions/
+6.Turn on Developer Mode
+7.Click Load unpacked
+8.Select the folder that directly contains:
+manifest.json
+Open Facebook and go to a Facebook group search page or group page
+Search for the keyword you want
+Open the extension and start extracting data
+
+
+Buttons
+1. Extract Visible Posts
+
+Extracts only the posts or information currently visible on your screen.
+
+Use this when you only want to collect what you can see right now.
+
+2. Extract Loaded Posts
+
+Extracts the posts or information already loaded in the current page DOM.
+
+Before using this button, scroll down manually to let Facebook load more content.
+
+3. Download CSV
+
+Downloads the extracted results as a CSV file.
+
+You can open the CSV file in Excel, Google Sheets, or other spreadsheet tools.
+
+
+中文说明
+
+FB Group Extractor V1.5 是一个简单的 Chrome 插件，用于从当前已经打开的 Facebook 小组页面中提取已加载或当前可见的信息，并导出为 CSV 表格。
+
+它主要用于外部社群调研、社群合作筛选、内容投放前的信息整理等工作场景。
+
+使用方法
+下载 zip 文件
+解压 zip
+打开 Chrome 浏览器
+进入：
+chrome://extensions/
+打开开发者模式
+点击“加载已解压的扩展程序”
+选择能直接看到 manifest.json 的文件夹
+打开 Facebook 小组搜索页或小组页面
+搜索对应关键词
+点击插件按钮提取数据
+按钮说明
+1. Extract Visible Posts
+
+只提取当前屏幕可见的帖子或信息。
+
+2. Extract Loaded Posts
+
+提取当前页面 DOM 中已经加载出来的帖子或信息。
+
+使用前需要你手动往下滚动，让 Facebook 加载更多内容。
+
+3. Download CSV
+
+下载表格文件。
+
+重要说明
+不会自动登录 Facebook
+只读取你当前页面中已经加载出来、并且你本来就能看到的内容
+如果页面没有加载出来，插件也无法提取
+如果想提取更多内容，需要先手动下滑页面
+
+
+
